@@ -8,14 +8,17 @@ import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/about.tsx";
 import * as $4 from "./routes/api/example/[id].ts";
 import * as $5 from "./routes/api/example/index.ts";
-import * as $6 from "./routes/api/joke.ts";
-import * as $7 from "./routes/api/random-uuid.ts";
-import * as $8 from "./routes/countdown.tsx";
-import * as $9 from "./routes/github/[username].tsx";
-import * as $10 from "./routes/greet/[name].tsx";
-import * as $11 from "./routes/index.tsx";
-import * as $$0 from "./islands/Countdown.tsx";
-import * as $$1 from "./islands/Counter.tsx";
+import * as $6 from "./routes/api/utils/smtp.tsx";
+import * as $7 from "./routes/api/utils/uuid.ts";
+import * as $8 from "./routes/broadcast/[id].tsx";
+import * as $9 from "./routes/broadcast/_layout.tsx";
+import * as $10 from "./routes/broadcast/index.tsx";
+import * as $11 from "./routes/countdown.tsx";
+import * as $12 from "./routes/index.tsx";
+import * as $$0 from "./islands/BroadcastCard.tsx";
+import * as $$1 from "./islands/Countdown.tsx";
+import * as $$2 from "./islands/Counter.tsx";
+import * as $$3 from "./islands/MailMessage.tsx";
 
 const manifest = {
   routes: {
@@ -25,16 +28,19 @@ const manifest = {
     "./routes/about.tsx": $3,
     "./routes/api/example/[id].ts": $4,
     "./routes/api/example/index.ts": $5,
-    "./routes/api/joke.ts": $6,
-    "./routes/api/random-uuid.ts": $7,
-    "./routes/countdown.tsx": $8,
-    "./routes/github/[username].tsx": $9,
-    "./routes/greet/[name].tsx": $10,
-    "./routes/index.tsx": $11,
+    "./routes/api/utils/smtp.tsx": $6,
+    "./routes/api/utils/uuid.ts": $7,
+    "./routes/broadcast/[id].tsx": $8,
+    "./routes/broadcast/_layout.tsx": $9,
+    "./routes/broadcast/index.tsx": $10,
+    "./routes/countdown.tsx": $11,
+    "./routes/index.tsx": $12,
   },
   islands: {
-    "./islands/Countdown.tsx": $$0,
-    "./islands/Counter.tsx": $$1,
+    "./islands/BroadcastCard.tsx": $$0,
+    "./islands/Countdown.tsx": $$1,
+    "./islands/Counter.tsx": $$2,
+    "./islands/MailMessage.tsx": $$3,
   },
   baseUrl: import.meta.url,
 };

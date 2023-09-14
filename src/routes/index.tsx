@@ -1,31 +1,14 @@
-import { useSignal } from "@preact/signals";
-import Counter from "../islands/Counter.tsx";
 import { Head } from "$fresh/runtime.ts";
 
 export default function Home() {
-  const count = useSignal(0);
   return (
     <>
       <Head>
-        <title>index</title>
+        <title>欢迎访问</title>
         <meta name="keywords" content="Hello index" />
       </Head>
-      <div class="px-4 py-8 mx-auto bg-[#86efac]">
-        <div class="max-w-screen-md mx-auto flex flex-col items-center justify-center">
-          <img
-            class="my-6"
-            src="/logo.svg"
-            width="128"
-            height="128"
-            alt="the Fresh logo: a sliced lemon dripping with juice"
-          />
-          <h1 class="text-4xl font-bold">Welcome to Fresh</h1>
-          <p class="my-4">
-            Try updating this message in the
-            <code class="mx-2">./routes/index.tsx</code> file, and refresh.
-          </p>
-          <Counter count={count} />
-        </div>
+      <div style="font-weight:lighter;font-size:3rem;background:#000851;background: linear-gradient(45deg, #1CB5E0 0%, #000851 100%);color:#fff;font-family:system-ui, -apple-system,sans-serif;width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;">
+        Welcome !
       </div>
     </>
   );
