@@ -20,9 +20,9 @@ export default function BroadcastView({ data }: PageProps<pagedata>) {
       <Head>
         <title>{item.title} ✗ 热点播报</title>
       </Head>
-      <div class="p-2 font-light">
-        <div class="mt-2 text-xl">{item.title}</div>
-        <div class="py-2 text-xs text-gray-600 flex gap-2">
+      <div class="max-w-md mx-auto md:max-w-3xl grid gap-4 p-4 font-light">
+        <div class="mt-2 text-xl text-center">{item.title}</div>
+        <div class="py-2 text-sm text-gray-600 flex justify-center gap-2">
           <span>发布日期 {dayjs(item.publishedAt).format("YYYY-MM-DD HH:mm")}</span>
           <span>浏览 {item.views}</span>
         </div>

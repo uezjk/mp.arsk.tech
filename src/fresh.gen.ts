@@ -5,42 +5,24 @@
 import * as $0 from "./routes/_404.tsx";
 import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/_middleware.ts";
-import * as $3 from "./routes/about.tsx";
-import * as $4 from "./routes/api/example/[id].ts";
-import * as $5 from "./routes/api/example/index.ts";
-import * as $6 from "./routes/api/utils/smtp.tsx";
-import * as $7 from "./routes/api/utils/uuid.ts";
-import * as $8 from "./routes/broadcast/[id].tsx";
-import * as $9 from "./routes/broadcast/_layout.tsx";
-import * as $10 from "./routes/broadcast/index.tsx";
-import * as $11 from "./routes/countdown.tsx";
-import * as $12 from "./routes/index.tsx";
+import * as $3 from "./routes/index.tsx";
+import * as $4 from "./routes/mp/broadcast/[id].tsx";
+import * as $5 from "./routes/mp/broadcast/_layout.tsx";
+import * as $6 from "./routes/mp/broadcast/index.tsx";
 import * as $$0 from "./islands/BroadcastCard.tsx";
-import * as $$1 from "./islands/Countdown.tsx";
-import * as $$2 from "./islands/Counter.tsx";
-import * as $$3 from "./islands/MailMessage.tsx";
 
 const manifest = {
   routes: {
     "./routes/_404.tsx": $0,
     "./routes/_app.tsx": $1,
     "./routes/_middleware.ts": $2,
-    "./routes/about.tsx": $3,
-    "./routes/api/example/[id].ts": $4,
-    "./routes/api/example/index.ts": $5,
-    "./routes/api/utils/smtp.tsx": $6,
-    "./routes/api/utils/uuid.ts": $7,
-    "./routes/broadcast/[id].tsx": $8,
-    "./routes/broadcast/_layout.tsx": $9,
-    "./routes/broadcast/index.tsx": $10,
-    "./routes/countdown.tsx": $11,
-    "./routes/index.tsx": $12,
+    "./routes/index.tsx": $3,
+    "./routes/mp/broadcast/[id].tsx": $4,
+    "./routes/mp/broadcast/_layout.tsx": $5,
+    "./routes/mp/broadcast/index.tsx": $6,
   },
   islands: {
     "./islands/BroadcastCard.tsx": $$0,
-    "./islands/Countdown.tsx": $$1,
-    "./islands/Counter.tsx": $$2,
-    "./islands/MailMessage.tsx": $$3,
   },
   baseUrl: import.meta.url,
 };

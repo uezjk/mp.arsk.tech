@@ -19,7 +19,7 @@ export default function Broadcast({ data }: PageProps<pagedata>) {
       <Head>
         <title>热点播报</title>
       </Head>
-      <div class="p-2 grid gap-2">
+      <div class="max-w-md mx-auto md:max-w-3xl grid gap-4 p-4">
         {items.map((item) => <BroadcastCard item={item} key={item.id} />)}
       </div>
     </>

@@ -1,4 +1,5 @@
 import qs from "qs";
+import dayjs from "dayjs";
 import request from "./request.ts";
 
 export type BoardcastResponse = { id: number; attributes: { title: string; views: string; publish: string; thumb: any } };
@@ -21,7 +22,7 @@ export const queryBroadcasts = async (): Promise<BoardcastListItem[]> => {
   return data.map((el: BoardcastResponse) => ({
     title: el.attributes.title,
     views: el.attributes.views,
-    publish: el.attributes.publish,
+    publish: dayjs(el.attributes.publish).format("YYYY-MM-DD HH:mm"),
     thumb: el.attributes.thumb.data.attributes.url,
     id: el.id,
   }));
