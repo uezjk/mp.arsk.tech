@@ -6,9 +6,9 @@ import * as $0 from "./routes/_404.tsx";
 import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
-import * as $4 from "./routes/mp/broadcast/[id].tsx";
-import * as $5 from "./routes/mp/broadcast/_layout.tsx";
-import * as $6 from "./routes/mp/broadcast/index.tsx";
+import * as $4 from "./routes/x/broadcast/[id].tsx";
+import * as $5 from "./routes/x/broadcast/_layout.tsx";
+import * as $6 from "./routes/x/broadcast/index.tsx";
 import * as $$0 from "./islands/BroadcastCard.tsx";
 
 const manifest = {
@@ -17,9 +17,9 @@ const manifest = {
     "./routes/_app.tsx": $1,
     "./routes/_middleware.ts": $2,
     "./routes/index.tsx": $3,
-    "./routes/mp/broadcast/[id].tsx": $4,
-    "./routes/mp/broadcast/_layout.tsx": $5,
-    "./routes/mp/broadcast/index.tsx": $6,
+    "./routes/x/broadcast/[id].tsx": $4,
+    "./routes/x/broadcast/_layout.tsx": $5,
+    "./routes/x/broadcast/index.tsx": $6,
   },
   islands: {
     "./islands/BroadcastCard.tsx": $$0,
