@@ -4,8 +4,10 @@ export default function BroadcastCard(props: Props) {
   const { item } = props;
   return (
     <div class="md:flex">
-      <div class="md:shrink-0">
-        <a href={"/x/broadcast/" + item.id}><img class="h-36 w-full object-cover md:w-96" src={item.thumb} /></a>
+      <div class="md:flex-shrink-0">
+        <a href={"/x/broadcast/" + item.id}>
+          <img class="w-full h-56 object-cover md:(w-72 h-44)" src={item.thumb} />
+        </a>
       </div>
       <div class="p-4 bg-gray-100 w-full">
         <a href={"/x/broadcast/" + item.id} class="tracking-wide text-indigo-500">{item.title}</a>
