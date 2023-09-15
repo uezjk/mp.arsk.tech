@@ -1,7 +1,7 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { Head } from "$fresh/runtime.ts";
 import { queryBroadcasts } from "~/utils/strapi.ts";
-import BroadcastCard from "~/islands/BroadcastCard.tsx";
+import BroadcastCard from "~/components/BroadcastCard.tsx";
 
 type pagedata = { items: BoardcastListItem[] };
 

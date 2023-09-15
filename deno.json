@@ -2,9 +2,9 @@
   "lock": false,
   "tasks": {
     "check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
-    "start": "deno --unstable run -A --allow-net --watch=src/static/,src/routes/ src/dev.ts",
+    "start": "deno --unstable run -A --watch=src/static/,src/routes/ src/dev.ts",
     "build": "deno --unstable run -A src/dev.ts build",
-    "preview": "deno run -A --allow-net src/main.ts",
+    "preview": "deno run -A src/main.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update ."
   },
   "lint": {
