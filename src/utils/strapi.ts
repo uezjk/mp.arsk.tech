@@ -2,11 +2,16 @@ import qs from "qs";
 import dayjs from "dayjs";
 import request from "./request.ts";
 
-export type BoardcastResponse = { id: number; attributes: { title: string; views: string; publish: string; thumb: any } };
+export type BoardcastResponse = {
+  id: number;
+  attributes: { title: string; views: string; publish: string; thumb: any };
+};
 
 const options = { encode: false, encodeValuesOnly: true };
 
-export const queryBroadcastView = async ({ id }: { id: string | number | undefined }): Promise<BoradcastView | null> => {
+export const queryBroadcastView = async (
+  { id }: { id: string | number | undefined },
+): Promise<BoradcastView | null> => {
   const [ok, resp] = await request.get(`/broadcasts/${id}?populate=thumb`);
   if (!ok) return null;
   const { data } = resp;
@@ -14,7 +19,10 @@ export const queryBroadcastView = async ({ id }: { id: string | number | undefin
 };
 
 export const queryBroadcasts = async (): Promise<BoardcastListItem[]> => {
-  const query = qs.stringify({ populate: "thumb", sort: "publish:DESC", fields: ["title", "views", "publish"] }, options);
+  const query = qs.stringify(
+    { populate: "thumb", sort: "publish:DESC", fields: ["title", "views", "publish"] },
+    options,
+  );
   const [ok, resp] = await request.get(`/broadcasts?${query}`);
   if (!ok) return [] as BoardcastListItem[];
   const { data } = resp;

@@ -34,8 +34,8 @@ export default function UtmUtlForm() {
   const [copyText, setCopyText] = useState("复制");
 
   const inputUpdate = (e: Event) => {
-    const target = e.target as HTMLInputElement;
-    setInput({ ...input, [target.name]: target.value });
+    const t = e.target as HTMLInputElement;
+    setInput({ ...input, [t.name]: t.value });
   };
 
   useEffect(() => {
@@ -43,11 +43,15 @@ export default function UtmUtlForm() {
     if (!source) {
       setFinalUrl("");
     } else {
-      const url = new URL(source);
-      utm_source && url.searchParams.set("utm_source", utm_source);
-      utm_medium && url.searchParams.set("utm_medium", utm_medium);
-      utm_campaign && url.searchParams.set("utm_campaign", utm_campaign);
-      setFinalUrl(url.toString());
+      try {
+        const url = new URL(source);
+        utm_source && url.searchParams.set("utm_source", utm_source);
+        utm_medium && url.searchParams.set("utm_medium", utm_medium);
+        utm_campaign && url.searchParams.set("utm_campaign", utm_campaign);
+        setFinalUrl(url.toString());
+      } catch (e) {
+        setFinalUrl("");
+      }
     }
   }, [input]);
 
@@ -64,9 +68,24 @@ export default function UtmUtlForm() {
         <div class="text-2xl text-center font-light text-indigo-700 pb-4">广告系列网址构建工具</div>
         <div class="flex flex-col gap-2">
           <InputItem title="投放网址" name="source" type="url" value={input.source} onChange={inputUpdate} />
-          <InputItem title="utm_source：引荐来源（例如：google、newsletter4、billboard）" name="utm_source" value={input.utm_source} onChange={inputUpdate} />
-          <InputItem title="utm_medium：营销媒介（例如：cpc、banner、email）" name="utm_medium" value={input.utm_medium} onChange={inputUpdate} />
-          <InputItem title="utm_campaign：产品、广告语、促销代码（例如：spring_sale）" name="utm_campaign" value={input.utm_campaign} onChange={inputUpdate} />
+          <InputItem
+            title="utm_source：引荐来源（例如：google、newsletter4、billboard）"
+            name="utm_source"
+            value={input.utm_source}
+            onChange={inputUpdate}
+          />
+          <InputItem
+            title="utm_medium：营销媒介（例如：cpc、banner、email）"
+            name="utm_medium"
+            value={input.utm_medium}
+            onChange={inputUpdate}
+          />
+          <InputItem
+            title="utm_campaign：产品、广告语、促销代码（例如：spring_sale）"
+            name="utm_campaign"
+            value={input.utm_campaign}
+            onChange={inputUpdate}
+          />
 
           <div class="flex flex-col gap-2 relative">
             <div class="text-gray-600">UTM 网址</div>
@@ -80,7 +99,9 @@ export default function UtmUtlForm() {
               class="block w-full p-2 outline-none rounded-sm shadow-sm"
             />
             <div class="pt-4">
-              <a href="javascript:;" class="block bg-blue-600 text-white text-center p-3" onClick={copyFn}>{copyText}</a>
+              <a href="javascript:;" class="block bg-blue-600 text-white text-center p-3" onClick={copyFn}>
+                {copyText}
+              </a>
             </div>
           </div>
         </div>
