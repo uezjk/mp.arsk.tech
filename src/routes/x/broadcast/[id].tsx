@@ -8,6 +8,7 @@ type pagedata = { item: BoradcastView };
 export const handler: Handlers<pagedata> = {
   GET: async (_req, ctx) => {
     const item = await queryBroadcastView({ id: ctx.params.id });
+    if (!item) return ctx.renderNotFound();
     return ctx.render({ ...ctx.state, item });
   },
 };

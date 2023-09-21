@@ -9,6 +9,8 @@ import * as $3 from "./routes/index.tsx";
 import * as $4 from "./routes/x/broadcast/[id].tsx";
 import * as $5 from "./routes/x/broadcast/_layout.tsx";
 import * as $6 from "./routes/x/broadcast/index.tsx";
+import * as $7 from "./routes/x/utm-url.tsx";
+import * as $$0 from "./islands/UtmUrlForm.tsx";
 
 const manifest = {
   routes: {
@@ -19,8 +21,11 @@ const manifest = {
     "./routes/x/broadcast/[id].tsx": $4,
     "./routes/x/broadcast/_layout.tsx": $5,
     "./routes/x/broadcast/index.tsx": $6,
+    "./routes/x/utm-url.tsx": $7,
   },
-  islands: {},
+  islands: {
+    "./islands/UtmUrlForm.tsx": $$0,
+  },
   baseUrl: import.meta.url,
 };
 

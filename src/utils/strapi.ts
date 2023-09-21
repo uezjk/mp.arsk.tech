@@ -6,9 +6,9 @@ export type BoardcastResponse = { id: number; attributes: { title: string; views
 
 const options = { encode: false, encodeValuesOnly: true };
 
-export const queryBroadcastView = async ({ id }: { id: string | number | undefined }): Promise<BoradcastView> => {
+export const queryBroadcastView = async ({ id }: { id: string | number | undefined }): Promise<BoradcastView | null> => {
   const [ok, resp] = await request.get(`/broadcasts/${id}?populate=thumb`);
-  if (!ok) return {} as BoradcastView;
+  if (!ok) return null;
   const { data } = resp;
   return { id, ...data.attributes };
 };
