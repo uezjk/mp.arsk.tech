@@ -27,7 +27,7 @@ const InputItem = (props: {
 
 const initForm = () => ({ source: "", utm_source: "", utm_medium: "", utm_campaign: "" });
 
-export default function UtmUtlForm(props: { title: string }) {
+export default function UtmUtlForm() {
   const inputRef = useRef<HTMLInputElement>(null);
   const [input, setInput] = useState(initForm());
   const [finalUrl, setFinalUrl] = useState("");
@@ -64,8 +64,7 @@ export default function UtmUtlForm(props: { title: string }) {
   };
 
   return (
-    <div class="bg-gray-100 p-4 md:p-10">
-      <div class="text-3xl text-center font-light text-indigo-700 pb-4">{props.title}</div>
+    <div class="bg-gray-100 p-4 md:p-8">
       <div class="flex flex-col gap-2">
         <InputItem title="投放网址" name="source" type="url" value={input.source} onChange={inputUpdate} />
         <InputItem

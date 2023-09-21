@@ -9,9 +9,10 @@ export default function UtmUrl() {
         <title>广告系列网址构建工具</title>
       </Head>
 
-      <main class="w-full flex flex-col gap-4 pt-2 pb-4 place-items-center min-h-screen md:(pt-4)">
+      <main class="w-full flex flex-col gap-4 pt-2 pb-4 place-items-center min-h-screen">
         <div class="px-2 w-full md:(max-w-screen-md)">
-          <UtmUtlForm title="广告系列网址构建工具" />
+          <h1 class="text(xl md:2xl) text-center font-light text-indigo-700 p-8">广告系列网址构建工具</h1>
+          <UtmUtlForm />
         </div>
         <GlobalFooter />
       </main>
