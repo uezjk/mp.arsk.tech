@@ -9,7 +9,7 @@ export default function App({ Component }: AppProps) {
         <link rel="shortcut icon" href="/favicon.svg" type="image/svg" />
         <title></title>
       </head>
-      <body>
+      <body class="antialiased">
         <Component />
       </body>
     </html>
