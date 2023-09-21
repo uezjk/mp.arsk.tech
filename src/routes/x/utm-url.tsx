@@ -1,6 +1,7 @@
 import { Head } from "$fresh/runtime.ts";
 import UtmUtlForm from "~/islands/UtmUrlForm.tsx";
 import GlobalFooter from "~/components/GlobalFooter.tsx";
+import TitleUtmUrl from "~/components/TitleUtmUrl.tsx";
 
 export default function UtmUrl() {
   return (
@@ -11,7 +12,9 @@ export default function UtmUrl() {
 
       <main class="w-full flex flex-col gap-4 pt-2 pb-4 place-items-center min-h-screen">
         <div class="px-2 w-full md:(max-w-screen-md)">
-          <h1 class="text(xl md:2xl) text-center font-light text-indigo-700 p-8">广告系列网址构建工具</h1>
+          <div class="p-8">
+            <TitleUtmUrl className="h-8 block mx-auto text-indigo-700" />
+          </div>
           <UtmUtlForm />
         </div>
         <GlobalFooter />
