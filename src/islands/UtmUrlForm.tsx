@@ -1,12 +1,11 @@
 import { tw } from "twind";
-import { write_text } from "clippy";
-import { useEffect, useState, useRef } from "preact/hooks";
+import { useEffect, useRef, useState } from "preact/hooks";
 
 const styles = {
-  title: tw`text-2xl text-center font-light text-indigo-700 pb-4`,
-  label: tw`text-gray-600`,
-  input: tw`block w-full p-2 outline-none rounded-sm shadow-sm`,
-  button: tw`block bg-blue-600 text-white text-center p-3`,
+  title: "text-2xl text-center font-light text-indigo-700 pb-4",
+  label: "text-gray-600",
+  input: "block w-full p-2 outline-none rounded-sm shadow-sm",
+  button: "block bg-blue-600 text-white text-center p-3",
 };
 
 const InputItem = (props: {
@@ -60,9 +59,10 @@ export default function UtmUtlForm() {
     }
   }, [input]);
 
-  const copyFn = async () => {
+  const copyFn = () => {
     if (!finalUrl) return;
-    await write_text(finalUrl);
+    inputRef.current?.select();
+    document.execCommand("copy");
     setCopyText("已复制");
   };
 

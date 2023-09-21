@@ -30,8 +30,7 @@
     "twind/": "https://esm.sh/twind@0.16.19/",
     "qs": "https://deno.land/x/deno_qs@0.0.3/mod.ts",
     "dayjs": "https://deno.land/x/deno_dayjs@v0.5.0/mod.ts",
-    "$std/": "https://deno.land/std@0.193.0/",
-    "clippy": "https://deno.land/x/clippy/mod.ts"
+    "$std/": "https://deno.land/std@0.193.0/"
   },
   "compilerOptions": {
     "jsx": "react-jsx",
