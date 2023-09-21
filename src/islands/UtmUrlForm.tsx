@@ -1,5 +1,6 @@
 import { tw } from "twind";
-import { useEffect, useState } from "preact/hooks";
+import { write_text } from "clippy";
+import { useEffect, useState, useRef } from "preact/hooks";
 
 const styles = {
   title: tw`text-2xl text-center font-light text-indigo-700 pb-4`,
@@ -36,6 +37,7 @@ const InputItem = (props: {
 const initForm = () => ({ source: "", utm_source: "", utm_medium: "", utm_campaign: "" });
 
 export default function UtmUtlForm() {
+  const inputRef = useRef<HTMLInputElement>(null);
   const [input, setInput] = useState(initForm());
   const [finalUrl, setFinalUrl] = useState("");
   const [copyText, setCopyText] = useState("复制");
@@ -58,10 +60,9 @@ export default function UtmUtlForm() {
     }
   }, [input]);
 
-  const copyFn = () => {
-    const input = document.getElementById("final-url") as HTMLInputElement;
-    input.select();
-    document.execCommand("copy");
+  const copyFn = async () => {
+    if (!finalUrl) return;
+    await write_text(finalUrl);
     setCopyText("已复制");
   };
 
@@ -77,7 +78,7 @@ export default function UtmUtlForm() {
 
           <div class="flex flex-col gap-2 relative">
             <div class={styles.label}>UTM 网址</div>
-            <input type="url" id="final-url" name="final-url" value={finalUrl} readonly class={styles.input} />
+            <input ref={inputRef} type="url" id="final-url" name="final-url" value={finalUrl} readonly class={styles.input} />
             <div class="pt-4">
               <a href="javascript:;" class={styles.button} onClick={copyFn}>{copyText}</a>
             </div>
