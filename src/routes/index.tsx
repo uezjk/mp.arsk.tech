@@ -6,8 +6,8 @@ export default function Home() {
       <Head>
         <title>欢迎访问</title>
       </Head>
-      <div style="font-weight:lighter;font-size:3rem;background:#000851;background: linear-gradient(45deg, #1CB5E0 0%, #000851 100%);color:#fff;font-family:system-ui, -apple-system,sans-serif;width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;">
-        Welcome !
+      <div class="p-0 h-screen w-screen flex items-center justify-center bg-blue-800" style="background: linear-gradient(45deg, #1CB5E0 0%, #000851 100%);">
+        <div class="text-4xl text-white">Welcome !</div>
       </div>
     </>
   );

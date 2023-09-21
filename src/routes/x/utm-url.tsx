@@ -8,7 +8,7 @@ export default function UtmUrl() {
         <title>广告系列网址构建工具</title>
       </Head>
 
-      <main class="mx-auto max-w-screen-md pt-10">
+      <main class="mx-auto max-w-screen-md pt-10 px-2">
         <UtmUtlForm />
       </main>
     </>
