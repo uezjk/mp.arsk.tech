@@ -1,12 +1,4 @@
-import { tw } from "twind";
 import { useEffect, useRef, useState } from "preact/hooks";
-
-const styles = {
-  title: "text-2xl text-center font-light text-indigo-700 pb-4",
-  label: "text-gray-600",
-  input: "block w-full p-2 outline-none rounded-sm shadow-sm",
-  button: "block bg-blue-600 text-white text-center p-3",
-};
 
 const InputItem = (props: {
   title: string;
@@ -19,14 +11,14 @@ const InputItem = (props: {
 }) => {
   return (
     <div class="flex flex-col gap-2">
-      <div class={styles.label}>{props.title}</div>
+      <div class="text-gray-600">{props.title}</div>
       <input
         type={props.type || "text"}
         placeholder={props.placeholder}
         name={props.name}
         value={props.value}
         onChange={props.onChange}
-        class={styles.input}
+        class="block w-full p-2 outline-none rounded-sm shadow-sm"
       />
       {props.children}
     </div>
@@ -69,7 +61,7 @@ export default function UtmUtlForm() {
   return (
     <>
       <div class="bg-gray-100 p-4 md:p-10">
-        <div class={styles.title}>广告系列网址构建工具</div>
+        <div class="text-2xl text-center font-light text-indigo-700 pb-4">广告系列网址构建工具</div>
         <div class="flex flex-col gap-2">
           <InputItem title="投放网址" name="source" type="url" value={input.source} onChange={inputUpdate} />
           <InputItem title="utm_source：引荐来源（例如：google、newsletter4、billboard）" name="utm_source" value={input.utm_source} onChange={inputUpdate} />
@@ -77,10 +69,18 @@ export default function UtmUtlForm() {
           <InputItem title="utm_campaign：产品、广告语、促销代码（例如：spring_sale）" name="utm_campaign" value={input.utm_campaign} onChange={inputUpdate} />
 
           <div class="flex flex-col gap-2 relative">
-            <div class={styles.label}>UTM 网址</div>
-            <input ref={inputRef} type="url" id="final-url" name="final-url" value={finalUrl} readonly class={styles.input} />
+            <div class="text-gray-600">UTM 网址</div>
+            <input
+              ref={inputRef}
+              type="url"
+              id="final-url"
+              name="final-url"
+              value={finalUrl}
+              readonly
+              class="block w-full p-2 outline-none rounded-sm shadow-sm"
+            />
             <div class="pt-4">
-              <a href="javascript:;" class={styles.button} onClick={copyFn}>{copyText}</a>
+              <a href="javascript:;" class="block bg-blue-600 text-white text-center p-3" onClick={copyFn}>{copyText}</a>
             </div>
           </div>
         </div>
