@@ -1,6 +1,6 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { Head } from "$fresh/runtime.ts";
-import { queryBroadcastView } from "~/utils/strapi.ts";
+import { queryBroadcastView } from "🛠️/strapi.ts";
 import dayjs from "dayjs";
 
 type pagedata = { item: BoradcastView };

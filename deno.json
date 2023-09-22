@@ -9,26 +9,20 @@
   },
   "lint": {
     "rules": {
-      "tags": [
-        "fresh",
-        "recommended"
-      ],
-      "exclude": [
-        "no-explicit-any"
-      ]
+      "tags": ["fresh", "recommended"],
+      "exclude": ["no-explicit-any"]
     },
-    "exclude": [
-      "_fresh"
-    ]
+    "exclude": ["_fresh"]
   },
   "fmt": {
-    "exclude": [
-      "_fresh"
-    ],
+    "exclude": ["_fresh"],
     "lineWidth": 120
   },
   "imports": {
-    "~/": "./src/",
+    "🛠️/": "./src/utils/",
+    "🍽️/": "./src/shared/",
+    "🏝️/": "./src/islands/",
+    "🧱/": "./src/components/",
     "denomailer": "https://deno.land/x/denomailer@1.6.0/mod.ts",
     "$fresh/": "https://deno.land/x/fresh@1.4.3/",
     "preact": "https://esm.sh/preact@10.15.1",
@@ -38,15 +32,12 @@
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.2.3",
     "qs": "https://deno.land/x/deno_qs@0.0.3/mod.ts",
     "dayjs": "https://deno.land/x/deno_dayjs@v0.5.0/mod.ts",
-    "$std/": "https://deno.land/std@0.193.0/"
+    "$std/": "https://deno.land/std@0.193.0/",
+    "zod": "https://esm.sh/zod@3.22.2"
   },
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ]
+    "lib": ["dom", "dom.iterable", "esnext"]
   }
 }

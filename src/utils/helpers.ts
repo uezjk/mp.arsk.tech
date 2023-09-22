@@ -4,3 +4,7 @@ export const JsonResponse = (body: unknown, init?: ResponseInit) => {
     ...init,
   });
 };
+
+export function generateItemId(): string {
+  return `${Date.now()}-${crypto.randomUUID()}`;
+}

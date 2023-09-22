@@ -4,24 +4,26 @@
 
 import * as $0 from "./routes/_404.tsx";
 import * as $1 from "./routes/_app.tsx";
-import * as $2 from "./routes/_middleware.ts";
-import * as $3 from "./routes/index.tsx";
-import * as $4 from "./routes/x/broadcast/[id].tsx";
-import * as $5 from "./routes/x/broadcast/_layout.tsx";
-import * as $6 from "./routes/x/broadcast/index.tsx";
-import * as $7 from "./routes/x/utm-url.tsx";
+import * as $2 from "./routes/api/_middleware.ts";
+import * as $3 from "./routes/api/utm-url/index.ts";
+import * as $4 from "./routes/index.tsx";
+import * as $5 from "./routes/x/broadcast/[id].tsx";
+import * as $6 from "./routes/x/broadcast/_layout.tsx";
+import * as $7 from "./routes/x/broadcast/index.tsx";
+import * as $8 from "./routes/x/utm-url.tsx";
 import * as $$0 from "./islands/UtmUrlForm.tsx";
 
 const manifest = {
   routes: {
     "./routes/_404.tsx": $0,
     "./routes/_app.tsx": $1,
-    "./routes/_middleware.ts": $2,
-    "./routes/index.tsx": $3,
-    "./routes/x/broadcast/[id].tsx": $4,
-    "./routes/x/broadcast/_layout.tsx": $5,
-    "./routes/x/broadcast/index.tsx": $6,
-    "./routes/x/utm-url.tsx": $7,
+    "./routes/api/_middleware.ts": $2,
+    "./routes/api/utm-url/index.ts": $3,
+    "./routes/index.tsx": $4,
+    "./routes/x/broadcast/[id].tsx": $5,
+    "./routes/x/broadcast/_layout.tsx": $6,
+    "./routes/x/broadcast/index.tsx": $7,
+    "./routes/x/utm-url.tsx": $8,
   },
   islands: {
     "./islands/UtmUrlForm.tsx": $$0,

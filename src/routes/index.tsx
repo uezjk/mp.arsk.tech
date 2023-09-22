@@ -6,11 +6,8 @@ export default function Home() {
       <Head>
         <title>欢迎访问</title>
       </Head>
-      <div
-        class="p-0 h-screen w-screen flex items-center justify-center bg-blue-800"
-        style="background: linear-gradient(45deg, #1CB5E0 0%, #000851 100%);"
-      >
-        <div class="text-6xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-white">Welcome !</div>
+      <div class="p-0 h-screen w-screen flex items-center justify-center bg-gradient-to-t from-black to-[#130f40]">
+        <div class="text-6xl bg-clip-text text-white">Welcome !</div>
       </div>
     </>
   );

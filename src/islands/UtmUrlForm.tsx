@@ -61,6 +61,10 @@ export default function UtmUtlForm() {
     document.execCommand("copy");
     setCopyText("已复制");
     setTimeout(() => setCopyText("复制"), 1000);
+
+    const body = new FormData();
+    body.append("url", finalUrl);
+    fetch("/api/utm-url", { method: "POST", body });
   };
 
   return (
