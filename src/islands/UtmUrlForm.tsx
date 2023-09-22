@@ -106,7 +106,7 @@ export default function UtmUtlForm() {
       </div>
       <div class="text-sm text-gray-400 pt-10">
         参考资料：
-        <a class="underline" href="https://support.google.com/analytics/answer/10917952?hl=zh-Hans">
+        <a class="underline break-all" href="https://support.google.com/analytics/answer/10917952?hl=zh-Hans">
           https://support.google.com/analytics/answer/10917952?hl=zh-Hans
         </a>
       </div>

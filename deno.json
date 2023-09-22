@@ -9,12 +9,22 @@
   },
   "lint": {
     "rules": {
-      "tags": ["fresh", "recommended"]
+      "tags": [
+        "fresh",
+        "recommended"
+      ],
+      "exclude": [
+        "no-explicit-any"
+      ]
     },
-    "exclude": ["_fresh"]
+    "exclude": [
+      "_fresh"
+    ]
   },
   "fmt": {
-    "exclude": ["_fresh"],
+    "exclude": [
+      "_fresh"
+    ],
     "lineWidth": 120
   },
   "imports": {
@@ -33,6 +43,10 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
-    "lib": ["dom", "dom.iterable", "esnext"]
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ]
   }
 }

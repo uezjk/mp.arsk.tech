@@ -1,6 +1,4 @@
-type Props = { style: "dark" | "light"; siteName: string; children?: unknown };
-
-export function Header(props: Props) {
+export function BroadcastHeader() {
   return (
     <div class="bg-gray-200 p-4">
       <a href="/x/broadcast">

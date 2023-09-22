@@ -27,7 +27,7 @@ export default function BroadcastView({ data }: PageProps<pagedata>) {
           <span>日期 {dayjs(item.publishedAt).format("YYYY-MM-DD HH:mm")}</span>
           <span>浏览 {item.views}</span>
         </div>
-        <div class="mt-4 text-lg" dangerouslySetInnerHTML={{ __html: fulltext }} />
+        <div dangerouslySetInnerHTML={{ __html: fulltext }} />
       </div>
     </>
   );

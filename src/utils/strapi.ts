@@ -1,6 +1,6 @@
 import qs from "qs";
 import dayjs from "dayjs";
-import request from "./request.ts";
+import request from "~/utils/request.ts";
 
 export type BoardcastResponse = {
   id: number;
