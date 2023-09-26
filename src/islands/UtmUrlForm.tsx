@@ -27,7 +27,7 @@ const InputItem = (props: {
 
 const initForm = () => ({ source: "", utm_source: "", utm_medium: "", utm_campaign: "" });
 
-export default function UtmUtlForm() {
+export default function UtmUrlForm() {
   const inputRef = useRef<HTMLInputElement>(null);
   const [input, setInput] = useState(initForm());
   const [finalUrl, setFinalUrl] = useState("");

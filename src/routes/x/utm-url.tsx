@@ -1,5 +1,5 @@
 import { Head } from "$fresh/runtime.ts";
-import UtmUtlForm from "🏝️/UtmUrlForm.tsx";
+import UtmUrlForm from "🏝️/UtmUrlForm.tsx";
 import GlobalFooter from "🧱/GlobalFooter.tsx";
 import TitleUtmUrl from "🧱/TitleUtmUrl.tsx";
 
@@ -15,7 +15,7 @@ export default function UtmUrl() {
           <div class="p-8">
             <TitleUtmUrl className="h-8 block mx-auto text-indigo-700" />
           </div>
-          <UtmUtlForm />
+          <UtmUrlForm />
         </div>
         <GlobalFooter />
       </main>
