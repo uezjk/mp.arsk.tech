@@ -1,7 +1,7 @@
 import { Head } from "$fresh/runtime.ts";
-import UtmUrlForm from "🏝️/UtmUrlForm.tsx";
-import GlobalFooter from "🧱/GlobalFooter.tsx";
-import TitleUtmUrl from "🧱/TitleUtmUrl.tsx";
+import UtmUrlForm from "~islands/UtmUrlForm.tsx";
+import GlobalFooter from "~components/GlobalFooter.tsx";
+import TitleUtmUrl from "~components/TitleUtmUrl.tsx";
 
 export default function UtmUrl() {
   return (

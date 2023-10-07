@@ -1,8 +1,4 @@
-import { STRAPI_API_URL } from "./costants.ts";
-
 export const useRequest = ({ baseUrl = "" } = {}) => {
-  baseUrl = baseUrl || STRAPI_API_URL;
-
   const http = async (url: string, options?: RequestInit) => {
     const response = await fetch(`${baseUrl}${url}`, options);
     const json = await response.json();
@@ -25,7 +21,12 @@ export const useRequest = ({ baseUrl = "" } = {}) => {
     return await http(url, { ...options, method: "DELETE" });
   };
 
-  return { get, post, put, destroy, http };
+  const json = async (url: string, body: unknown, options: RequestInit = {}) => {
+    options.headers = { ...options.headers, "Content-Type": "application/json" };
+    return await post(url, { ...options, body: JSON.stringify(body) });
+  };
+
+  return { get, post, put, destroy, json, http };
 };
 
 const request = useRequest();

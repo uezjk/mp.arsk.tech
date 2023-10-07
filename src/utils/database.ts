@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { TodoList, TodoListItem } from "🍽️/types.ts";
-import { DENO_KV_CONNECT_URL } from "🛠️/costants.ts";
+import { TodoList, TodoListItem } from "~shared/types.ts";
+import { DENO_KV_CONNECT_URL } from "~utils/costants.ts";
 
 export const db = await Deno.openKv(DENO_KV_CONNECT_URL);
 

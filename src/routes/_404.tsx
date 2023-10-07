@@ -1,5 +1,5 @@
 import { Head } from "$fresh/runtime.ts";
-import NotFound from "🧱/NotFound.tsx";
+import NotFound from "~components/NotFound.tsx";
 
 export default function Error404() {
   return (

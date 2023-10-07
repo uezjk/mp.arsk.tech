@@ -1,6 +1,6 @@
 import { LayoutProps } from "$fresh/server.ts";
-import { BroadcastHeader } from "🧱/BroadcastHeader.tsx";
-import GlobalFooter from "🧱/GlobalFooter.tsx";
+import BroadcastHeader from "~components/BroadcastHeader.tsx";
+import GlobalFooter from "~components/GlobalFooter.tsx";
 
 export default function Layout({ Component }: LayoutProps) {
   return (

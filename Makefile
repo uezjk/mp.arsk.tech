@@ -1,6 +1,6 @@
 APPNAME = fresh-web
 TAG = $(shell git rev-parse --short=8 HEAD)
-HUB = docker.io
+HUB = registry.cn-shanghai.aliyuncs.com
 NAMESPACE = arsk
 
 dev:

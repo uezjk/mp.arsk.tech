@@ -1,6 +1,7 @@
 import qs from "qs";
 import dayjs from "dayjs";
-import request from "🛠️/request.ts";
+import { useRequest } from "~utils/request.ts";
+import { STRAPI_API_URL } from "~utils/costants.ts";
 
 export type BoardcastResponse = {
   id: number;
@@ -8,6 +9,8 @@ export type BoardcastResponse = {
 };
 
 const options = { encode: false, encodeValuesOnly: true };
+
+const request = useRequest({ baseUrl: STRAPI_API_URL });
 
 export const queryBroadcastView = async (
   { id }: { id: string | number | undefined },

@@ -1,4 +1,4 @@
-export function BroadcastHeader() {
+export default function BroadcastHeader() {
   return (
     <div class="bg-gray-200 p-4">
       <a href="/x/broadcast">
