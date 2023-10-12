@@ -6,11 +6,11 @@ import * as auth from "~utils/api/auth.ts";
 export const handler: Handlers = {
   async POST(req, _) {
     try {
-      const { email, password, code } = await req.json();
-      const resp = await auth.signUp(code, { email, password });
+      const { email, password, invite_code } = await req.json();
+      const resp = await auth.signUp(invite_code, { email, password });
       const used_by = resp.user?.id ?? null;
       const now = new Date().toLocaleString();
-      await supabase.from("invite_codes").update({ used_by, used_at: now }).eq("code", code);
+      await supabase.from("invite_codes").update({ used_by, used_at: now }).eq("code", invite_code);
       return JsonResponse();
     } catch (e) {
       return JsonResponse({ error: e.message });
