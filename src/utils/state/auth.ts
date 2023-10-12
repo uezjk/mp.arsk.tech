@@ -1,19 +1,5 @@
 import { computed, signal } from "@preact/signals";
-
-const storage = {
-  removeItem: (name: string) => {
-    if (typeof localStorage === "undefined") return;
-    localStorage.removeItem(name);
-  },
-  setItem: (name: string, value: string) => {
-    if (typeof localStorage === "undefined") return;
-    localStorage.setItem(name, value);
-  },
-  getItem: (name: string) => {
-    if (typeof localStorage === "undefined") return null;
-    return localStorage.getItem(name);
-  },
-};
+import { storage } from "~utils/storage.ts";
 
 export function useAuth() {
   const user = signal<null | { id: string; email: string }>(null);

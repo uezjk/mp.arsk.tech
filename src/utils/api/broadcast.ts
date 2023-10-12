@@ -2,6 +2,7 @@ import qs from "qs";
 import dayjs from "dayjs";
 import { useRequest } from "~utils/request.ts";
 import { STRAPI_API_URL } from "~utils/costants.ts";
+import type { BoardcastListItem, BoradcastView } from "~shared/types.ts";
 
 export type BoardcastResponse = {
   id: number;

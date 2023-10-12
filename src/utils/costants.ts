@@ -2,8 +2,4 @@ export const STRAPI_API_URL = Deno.env.get("STRAPI_API_URL") || "http://localhos
 
 export const DENO_KV_CONNECT_URL = Deno.env.get("DENO_KV_CONNECT_URL");
 
-export const TABLES = {
-  utm_urls: "utm_urls",
-  profiles: "profiles",
-  invite_codes: "invite_codes",
-}
+export const OAUTH_REDIRECT = Deno.env.get("SUPABASE_OAUTH_REDIRECT");

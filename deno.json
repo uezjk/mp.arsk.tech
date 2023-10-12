@@ -27,7 +27,8 @@
     "zod": "https://esm.sh/zod@3.22.2",
     "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2.38.0",
     "twind": "https://esm.sh/twind@1.0.7",
-    "twind/": "https://esm.sh/twind@1.0.7/"
+    "twind/": "https://esm.sh/twind@1.0.7/",
+    "$marked-mangle": "https://esm.sh/marked-mangle@1.1.4"
   },
   "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact", "lib": ["dom", "dom.iterable", "esnext"] },
   "exclude": ["**/_fresh/*"]

@@ -1,14 +1,14 @@
-export interface TodoList {
-  items: TodoListItem[];
-}
+export type BaseModel = { id: number; createdAt: string; updatedAt: string; publishedAt: string };
 
-export interface TodoListItem {
-  // Non-empty in API request and response
-  id?: string;
-  // Non-empty in API response
-  versionstamp?: string;
-  text: string;
-  completed: boolean;
-  createdAt: number;
-  updatedAt: number;
-}
+export type BoradcastView = BaseModel & {
+  title: string;
+  content: string;
+  views: string;
+  publish: string;
+  video: string;
+  fulltext: string;
+  author: string;
+  thumb: string;
+};
+
+export type BoardcastListItem = { title: string; views: string; publish: string; thumb: string; id: number };

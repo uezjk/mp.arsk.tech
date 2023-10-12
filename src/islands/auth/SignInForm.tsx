@@ -5,13 +5,20 @@ import ajax from "~utils/ajax.ts";
 
 export default function SignInForm(props: { title: string }) {
   const auth = useAuth();
-  const [input, setInput] = useState({ email: "", password: "123456" });
+  const [input, setInput] = useState({ email: "", password: "" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
   const inputUpdate = (e: Event) => {
     const t = e.target as HTMLInputElement;
     setInput({ ...input, [t.name]: t.value });
+  };
+
+  const authFn = async (provider: string) => {
+    const [ok, resp] = await ajax.get("/api/auth?provider=" + provider);
+    if (ok) {
+      location.href = resp.data.url;
+    }
   };
 
   const submitFn = async () => {
@@ -38,17 +45,31 @@ export default function SignInForm(props: { title: string }) {
       </div>
       <div class="grid gap-2">
         <InputItem title="邮箱" name="email" value={input.email} onInput={inputUpdate} />
-        <InputItem title="密码" name="password" value={input.password} onInput={inputUpdate} />
+        <InputItem title="密码" name="password" value={input.password} onInput={inputUpdate} type="password" />
+        <div class="pt-4">
+          <Button className="w-full block bg-[#130f40] text-center text-white" onClick={submitFn}>
+            {loading ? "请稍后" : "登录"}
+          </Button>
+        </div>
       </div>
-      <div class="grid gap-2 pt-8">
-        <Button className="block bg-[#130f40] text-center text-white" onClick={submitFn}>
-          {loading ? "请稍后" : "登录"}
+
+      <div class="py-4">
+        <div class="border-t border-solid border-gray-800"></div>
+      </div>
+
+      <div class="flex gap-4">
+        <Button className="grow block bg-[#4285f4] text-center text-white" onClick={() => authFn("google")}>
+          Google 账号登录
         </Button>
-        <div class="flex items-start justify-between text-white">
-          <div>{error}</div>
-          <div class="flex-none">
-            <a href="/x/sign-up" class="border-b">注册账号</a>
-          </div>
+        <Button className="grow block bg-gray-800 text-center text-white" onClick={() => authFn("github")}>
+          Github 账号登录
+        </Button>
+      </div>
+
+      <div class="flex items-start justify-between text-white pt-4">
+        <div>{error}</div>
+        <div class="flex-none">
+          <a href="/x/sign-up" class="border-b">注册账号</a>
         </div>
       </div>
     </div>

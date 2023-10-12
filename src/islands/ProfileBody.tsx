@@ -16,9 +16,14 @@ export default function ProfileBody() {
     if (!auth.isAuthenticated.value) {
       location.href = "/x/sign-in";
     } else {
-      ajax.get("/api/profile").then((res) => {
-        const [ok, result] = res;
-        setInput({ ...input, ...result.data });
+      ajax.get("/api/profile").then((data) => {
+        const [ok, resp] = data;
+        if (ok) {
+          setInput({ ...input, ...resp.data });
+        } else {
+          auth.destroy();
+          location.href = "/x/sign-in";
+        }
       });
     }
   }, []);

@@ -1,3 +1,5 @@
+import type { BoardcastListItem } from "~shared/types.ts";
+
 type Props = { item: BoardcastListItem };
 
 export default function BroadcastCard(props: Props) {

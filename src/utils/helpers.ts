@@ -1,6 +1,5 @@
 export const JsonResponse = (body: unknown = {}, init?: ResponseInit) => {
-  body = Object.assign({ error: null }, body);
-  return new Response(JSON.stringify(body), {
+  return new Response(JSON.stringify(Object.assign({ error: null }, body)), {
     headers: { "Content-Type": "application/json" },
     ...init,
   });

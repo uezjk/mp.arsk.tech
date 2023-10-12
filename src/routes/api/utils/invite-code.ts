@@ -7,8 +7,11 @@ export const handler: Handlers = {
     const user = await requestUser(_req).catch((_) => null);
     const created_by = user?.id || null;
     const code = crypto.randomUUID();
-    await supabase.from("invite_codes").insert({ code, created_by });
-    return JsonResponse({ data: code });
+    const resp = await supabase.from("invite_codes").insert({ code, created_by });
+    if (resp.error === null) {
+      return JsonResponse({ data: code });
+    }
+    return JsonResponse({ error: resp.error });
   },
   async GET(_req, _) {
     const items = await supabase.from("invite_codes").select().order("created_at", { ascending: false });

@@ -5,28 +5,33 @@
 import * as $0 from "./routes/_404.tsx";
 import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/api/_middleware.ts";
-import * as $3 from "./routes/api/auth/sign-in.ts";
-import * as $4 from "./routes/api/auth/sign-up.ts";
-import * as $5 from "./routes/api/example.ts";
-import * as $6 from "./routes/api/profile/index.ts";
-import * as $7 from "./routes/api/users/[uid].ts";
-import * as $8 from "./routes/api/users/index.ts";
-import * as $9 from "./routes/api/utils/invite-code.ts";
-import * as $10 from "./routes/api/utm-url/index.ts";
-import * as $11 from "./routes/index.tsx";
-import * as $12 from "./routes/x/broadcast/[id].tsx";
-import * as $13 from "./routes/x/broadcast/_layout.tsx";
-import * as $14 from "./routes/x/broadcast/index.tsx";
-import * as $15 from "./routes/x/profile.tsx";
-import * as $16 from "./routes/x/sign-in.tsx";
-import * as $17 from "./routes/x/sign-up.tsx";
-import * as $18 from "./routes/x/utm-url.tsx";
-import * as $$0 from "./islands/LoginForm.tsx";
-import * as $$1 from "./islands/ProfileBody.tsx";
-import * as $$2 from "./islands/UtmUrlForm.tsx";
-import * as $$3 from "./islands/Welcome.tsx";
-import * as $$4 from "./islands/auth/SignInForm.tsx";
-import * as $$5 from "./islands/auth/SignUpForm.tsx";
+import * as $3 from "./routes/api/auth/index.ts";
+import * as $4 from "./routes/api/auth/sign-in.ts";
+import * as $5 from "./routes/api/auth/sign-up.ts";
+import * as $6 from "./routes/api/example.ts";
+import * as $7 from "./routes/api/profile/_middleware.ts";
+import * as $8 from "./routes/api/profile/index.ts";
+import * as $9 from "./routes/api/users/[uid].ts";
+import * as $10 from "./routes/api/users/index.ts";
+import * as $11 from "./routes/api/utils/invite-code.ts";
+import * as $12 from "./routes/api/utm-url/index.ts";
+import * as $13 from "./routes/gfm.css.ts";
+import * as $14 from "./routes/index.tsx";
+import * as $15 from "./routes/x/broadcast/[id].tsx";
+import * as $16 from "./routes/x/broadcast/_layout.tsx";
+import * as $17 from "./routes/x/broadcast/index.tsx";
+import * as $18 from "./routes/x/oauth/validate.tsx";
+import * as $19 from "./routes/x/privacy.tsx";
+import * as $20 from "./routes/x/profile.tsx";
+import * as $21 from "./routes/x/sign-in.tsx";
+import * as $22 from "./routes/x/sign-up.tsx";
+import * as $23 from "./routes/x/utm-url.tsx";
+import * as $$0 from "./islands/ProfileBody.tsx";
+import * as $$1 from "./islands/UtmUrlForm.tsx";
+import * as $$2 from "./islands/Welcome.tsx";
+import * as $$3 from "./islands/auth/SignInForm.tsx";
+import * as $$4 from "./islands/auth/SignUpForm.tsx";
+import * as $$5 from "./islands/auth/Validation.tsx";
 import * as $$6 from "./islands/ext/UserHead.tsx";
 
 const manifest = {
@@ -34,30 +39,35 @@ const manifest = {
     "./routes/_404.tsx": $0,
     "./routes/_app.tsx": $1,
     "./routes/api/_middleware.ts": $2,
-    "./routes/api/auth/sign-in.ts": $3,
-    "./routes/api/auth/sign-up.ts": $4,
-    "./routes/api/example.ts": $5,
-    "./routes/api/profile/index.ts": $6,
-    "./routes/api/users/[uid].ts": $7,
-    "./routes/api/users/index.ts": $8,
-    "./routes/api/utils/invite-code.ts": $9,
-    "./routes/api/utm-url/index.ts": $10,
-    "./routes/index.tsx": $11,
-    "./routes/x/broadcast/[id].tsx": $12,
-    "./routes/x/broadcast/_layout.tsx": $13,
-    "./routes/x/broadcast/index.tsx": $14,
-    "./routes/x/profile.tsx": $15,
-    "./routes/x/sign-in.tsx": $16,
-    "./routes/x/sign-up.tsx": $17,
-    "./routes/x/utm-url.tsx": $18,
+    "./routes/api/auth/index.ts": $3,
+    "./routes/api/auth/sign-in.ts": $4,
+    "./routes/api/auth/sign-up.ts": $5,
+    "./routes/api/example.ts": $6,
+    "./routes/api/profile/_middleware.ts": $7,
+    "./routes/api/profile/index.ts": $8,
+    "./routes/api/users/[uid].ts": $9,
+    "./routes/api/users/index.ts": $10,
+    "./routes/api/utils/invite-code.ts": $11,
+    "./routes/api/utm-url/index.ts": $12,
+    "./routes/gfm.css.ts": $13,
+    "./routes/index.tsx": $14,
+    "./routes/x/broadcast/[id].tsx": $15,
+    "./routes/x/broadcast/_layout.tsx": $16,
+    "./routes/x/broadcast/index.tsx": $17,
+    "./routes/x/oauth/validate.tsx": $18,
+    "./routes/x/privacy.tsx": $19,
+    "./routes/x/profile.tsx": $20,
+    "./routes/x/sign-in.tsx": $21,
+    "./routes/x/sign-up.tsx": $22,
+    "./routes/x/utm-url.tsx": $23,
   },
   islands: {
-    "./islands/LoginForm.tsx": $$0,
-    "./islands/ProfileBody.tsx": $$1,
-    "./islands/UtmUrlForm.tsx": $$2,
-    "./islands/Welcome.tsx": $$3,
-    "./islands/auth/SignInForm.tsx": $$4,
-    "./islands/auth/SignUpForm.tsx": $$5,
+    "./islands/ProfileBody.tsx": $$0,
+    "./islands/UtmUrlForm.tsx": $$1,
+    "./islands/Welcome.tsx": $$2,
+    "./islands/auth/SignInForm.tsx": $$3,
+    "./islands/auth/SignUpForm.tsx": $$4,
+    "./islands/auth/Validation.tsx": $$5,
     "./islands/ext/UserHead.tsx": $$6,
   },
   baseUrl: import.meta.url,

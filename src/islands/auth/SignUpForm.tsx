@@ -36,7 +36,7 @@ export default function SignUpForm(props: { title: string }) {
       </div>
       <div class="grid gap-2">
         <InputItem title="邮箱" name="email" value={input.email} onInput={inputUpdate} />
-        <InputItem title="密码" name="password" value={input.password} onInput={inputUpdate} />
+        <InputItem title="密码" name="password" value={input.password} onInput={inputUpdate} type="password" />
         <InputItem title="邀请码" name="invite_code" value={input.invite_code} onInput={inputUpdate} />
       </div>
       <div class="grid gap-2 pt-8">

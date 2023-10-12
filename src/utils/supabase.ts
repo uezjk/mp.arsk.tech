@@ -20,5 +20,8 @@ export const requestUser = async (request: Request) => {
   if (error) {
     throw new Error(error.message);
   }
+  if (data.user === null) {
+    throw new Error("Unauthorized");
+  }
   return data.user;
 };
