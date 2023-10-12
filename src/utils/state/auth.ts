@@ -2,16 +2,16 @@ import { computed, signal } from "@preact/signals";
 
 const storage = {
   removeItem: (name: string) => {
-    if (typeof window === "undefined") return;
-    window.localStorage.removeItem(name);
+    if (typeof localStorage === "undefined") return;
+    localStorage.removeItem(name);
   },
   setItem: (name: string, value: string) => {
-    if (typeof window === "undefined") return;
-    window.localStorage.setItem(name, value);
+    if (typeof localStorage === "undefined") return;
+    localStorage.setItem(name, value);
   },
   getItem: (name: string) => {
-    if (typeof window === "undefined") return null;
-    return window.localStorage.getItem(name);
+    if (typeof localStorage === "undefined") return null;
+    return localStorage.getItem(name);
   },
 };
 
