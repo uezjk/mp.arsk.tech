@@ -7,8 +7,13 @@
     "preview": "deno --unstable run -A src/main.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update ."
   },
-  "lint": { "rules": { "tags": ["fresh", "recommended"], "exclude": ["no-explicit-any"] } },
-  "fmt": { "lineWidth": 120 },
+  "lint": {
+    "rules": {
+      "tags": ["fresh", "recommended"],
+      "exclude": ["no-explicit-any"]
+    }
+  },
+  "fmt": { "lineWidth": 130 },
   "imports": {
     "~utils/": "./src/utils/",
     "~shared/": "./src/shared/",
@@ -30,6 +35,10 @@
     "twind/": "https://esm.sh/twind@1.0.7/",
     "$marked-mangle": "https://esm.sh/marked-mangle@1.1.4"
   },
-  "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact", "lib": ["dom", "dom.iterable", "esnext"] },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+    "lib": ["dom", "dom.iterable", "esnext"]
+  },
   "exclude": ["**/_fresh/*"]
 }

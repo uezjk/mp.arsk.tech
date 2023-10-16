@@ -20,19 +20,21 @@ import * as $14 from "./routes/index.tsx";
 import * as $15 from "./routes/x/broadcast/[id].tsx";
 import * as $16 from "./routes/x/broadcast/_layout.tsx";
 import * as $17 from "./routes/x/broadcast/index.tsx";
-import * as $18 from "./routes/x/oauth/validate.tsx";
-import * as $19 from "./routes/x/privacy.tsx";
-import * as $20 from "./routes/x/profile.tsx";
-import * as $21 from "./routes/x/sign-in.tsx";
-import * as $22 from "./routes/x/sign-up.tsx";
-import * as $23 from "./routes/x/utm-url.tsx";
+import * as $18 from "./routes/x/carousel.tsx";
+import * as $19 from "./routes/x/oauth/validate.tsx";
+import * as $20 from "./routes/x/privacy.tsx";
+import * as $21 from "./routes/x/profile.tsx";
+import * as $22 from "./routes/x/sign-in.tsx";
+import * as $23 from "./routes/x/sign-up.tsx";
+import * as $24 from "./routes/x/utm-url.tsx";
 import * as $$0 from "./islands/ProfileBody.tsx";
-import * as $$1 from "./islands/UtmUrlForm.tsx";
-import * as $$2 from "./islands/Welcome.tsx";
-import * as $$3 from "./islands/auth/SignInForm.tsx";
-import * as $$4 from "./islands/auth/SignUpForm.tsx";
-import * as $$5 from "./islands/auth/Validation.tsx";
-import * as $$6 from "./islands/ext/UserHead.tsx";
+import * as $$1 from "./islands/SimpleCarousel.tsx";
+import * as $$2 from "./islands/UtmUrlForm.tsx";
+import * as $$3 from "./islands/Welcome.tsx";
+import * as $$4 from "./islands/auth/SignInForm.tsx";
+import * as $$5 from "./islands/auth/SignUpForm.tsx";
+import * as $$6 from "./islands/auth/Validation.tsx";
+import * as $$7 from "./islands/ext/UserHead.tsx";
 
 const manifest = {
   routes: {
@@ -54,21 +56,23 @@ const manifest = {
     "./routes/x/broadcast/[id].tsx": $15,
     "./routes/x/broadcast/_layout.tsx": $16,
     "./routes/x/broadcast/index.tsx": $17,
-    "./routes/x/oauth/validate.tsx": $18,
-    "./routes/x/privacy.tsx": $19,
-    "./routes/x/profile.tsx": $20,
-    "./routes/x/sign-in.tsx": $21,
-    "./routes/x/sign-up.tsx": $22,
-    "./routes/x/utm-url.tsx": $23,
+    "./routes/x/carousel.tsx": $18,
+    "./routes/x/oauth/validate.tsx": $19,
+    "./routes/x/privacy.tsx": $20,
+    "./routes/x/profile.tsx": $21,
+    "./routes/x/sign-in.tsx": $22,
+    "./routes/x/sign-up.tsx": $23,
+    "./routes/x/utm-url.tsx": $24,
   },
   islands: {
     "./islands/ProfileBody.tsx": $$0,
-    "./islands/UtmUrlForm.tsx": $$1,
-    "./islands/Welcome.tsx": $$2,
-    "./islands/auth/SignInForm.tsx": $$3,
-    "./islands/auth/SignUpForm.tsx": $$4,
-    "./islands/auth/Validation.tsx": $$5,
-    "./islands/ext/UserHead.tsx": $$6,
+    "./islands/SimpleCarousel.tsx": $$1,
+    "./islands/UtmUrlForm.tsx": $$2,
+    "./islands/Welcome.tsx": $$3,
+    "./islands/auth/SignInForm.tsx": $$4,
+    "./islands/auth/SignUpForm.tsx": $$5,
+    "./islands/auth/Validation.tsx": $$6,
+    "./islands/ext/UserHead.tsx": $$7,
   },
   baseUrl: import.meta.url,
 };
