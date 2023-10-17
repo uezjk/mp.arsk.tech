@@ -1,5 +1,5 @@
 import { useState } from "preact/hooks";
-import { Button, InputItem } from "~components/ui/index.ts";
+import { Button, LinkButton, InputItem } from "../../components/ui/mod.ts";
 import { useAuth } from "~utils/state/auth.ts";
 import ajax from "~utils/ajax.ts";
 
@@ -12,13 +12,6 @@ export default function SignInForm(props: { title: string }) {
   const inputUpdate = (e: Event) => {
     const t = e.target as HTMLInputElement;
     setInput({ ...input, [t.name]: t.value });
-  };
-
-  const authFn = async (provider: string) => {
-    const [ok, resp] = await ajax.get("/api/auth?provider=" + provider);
-    if (ok) {
-      location.href = resp.data.url;
-    }
   };
 
   const submitFn = async () => {
@@ -47,7 +40,7 @@ export default function SignInForm(props: { title: string }) {
         <InputItem title="邮箱" name="email" value={input.email} onInput={inputUpdate} />
         <InputItem title="密码" name="password" value={input.password} onInput={inputUpdate} type="password" />
         <div class="pt-4">
-          <Button className="w-full block bg-[#130f40] text-center text-white" onClick={submitFn}>
+          <Button class="w-full block bg-[#130f40] text-center text-white" onClick={submitFn}>
             {loading ? "请稍后" : "登录"}
           </Button>
         </div>
@@ -58,12 +51,12 @@ export default function SignInForm(props: { title: string }) {
       </div>
 
       <div class="flex gap-4">
-        <Button className="grow block bg-[#4285f4] text-center text-white" onClick={() => authFn("google")}>
+        <LinkButton href="/x/oauth/google" class="grow block bg-[#4285f4] text-center text-white">
           Google 账号登录
-        </Button>
-        <Button className="grow block bg-gray-800 text-center text-white" onClick={() => authFn("github")}>
+        </LinkButton>
+        <LinkButton href="/x/oauth/github" class="grow block bg-gray-800 text-center text-white">
           Github 账号登录
-        </Button>
+        </LinkButton>
       </div>
 
       <div class="flex items-start justify-between text-white pt-4">

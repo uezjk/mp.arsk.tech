@@ -15,18 +15,20 @@ import * as $9 from "./routes/api/users/[uid].ts";
 import * as $10 from "./routes/api/users/index.ts";
 import * as $11 from "./routes/api/utils/invite-code.ts";
 import * as $12 from "./routes/api/utm-url/index.ts";
-import * as $13 from "./routes/gfm.css.ts";
-import * as $14 from "./routes/index.tsx";
-import * as $15 from "./routes/x/broadcast/[id].tsx";
-import * as $16 from "./routes/x/broadcast/_layout.tsx";
-import * as $17 from "./routes/x/broadcast/index.tsx";
-import * as $18 from "./routes/x/carousel.tsx";
-import * as $19 from "./routes/x/oauth/validate.tsx";
-import * as $20 from "./routes/x/privacy.tsx";
-import * as $21 from "./routes/x/profile.tsx";
-import * as $22 from "./routes/x/sign-in.tsx";
-import * as $23 from "./routes/x/sign-up.tsx";
-import * as $24 from "./routes/x/utm-url.tsx";
+import * as $13 from "./routes/blog/[slug].tsx";
+import * as $14 from "./routes/gfm.css.ts";
+import * as $15 from "./routes/index.tsx";
+import * as $16 from "./routes/x/broadcast/[id].tsx";
+import * as $17 from "./routes/x/broadcast/_layout.tsx";
+import * as $18 from "./routes/x/broadcast/index.tsx";
+import * as $19 from "./routes/x/carousel.tsx";
+import * as $20 from "./routes/x/oauth/[provider].tsx";
+import * as $21 from "./routes/x/oauth/validate.tsx";
+import * as $22 from "./routes/x/privacy.tsx";
+import * as $23 from "./routes/x/profile.tsx";
+import * as $24 from "./routes/x/sign-in.tsx";
+import * as $25 from "./routes/x/sign-up.tsx";
+import * as $26 from "./routes/x/utm-url.tsx";
 import * as $$0 from "./islands/ProfileBody.tsx";
 import * as $$1 from "./islands/SimpleCarousel.tsx";
 import * as $$2 from "./islands/UtmUrlForm.tsx";
@@ -51,18 +53,20 @@ const manifest = {
     "./routes/api/users/index.ts": $10,
     "./routes/api/utils/invite-code.ts": $11,
     "./routes/api/utm-url/index.ts": $12,
-    "./routes/gfm.css.ts": $13,
-    "./routes/index.tsx": $14,
-    "./routes/x/broadcast/[id].tsx": $15,
-    "./routes/x/broadcast/_layout.tsx": $16,
-    "./routes/x/broadcast/index.tsx": $17,
-    "./routes/x/carousel.tsx": $18,
-    "./routes/x/oauth/validate.tsx": $19,
-    "./routes/x/privacy.tsx": $20,
-    "./routes/x/profile.tsx": $21,
-    "./routes/x/sign-in.tsx": $22,
-    "./routes/x/sign-up.tsx": $23,
-    "./routes/x/utm-url.tsx": $24,
+    "./routes/blog/[slug].tsx": $13,
+    "./routes/gfm.css.ts": $14,
+    "./routes/index.tsx": $15,
+    "./routes/x/broadcast/[id].tsx": $16,
+    "./routes/x/broadcast/_layout.tsx": $17,
+    "./routes/x/broadcast/index.tsx": $18,
+    "./routes/x/carousel.tsx": $19,
+    "./routes/x/oauth/[provider].tsx": $20,
+    "./routes/x/oauth/validate.tsx": $21,
+    "./routes/x/privacy.tsx": $22,
+    "./routes/x/profile.tsx": $23,
+    "./routes/x/sign-in.tsx": $24,
+    "./routes/x/sign-up.tsx": $25,
+    "./routes/x/utm-url.tsx": $26,
   },
   islands: {
     "./islands/ProfileBody.tsx": $$0,

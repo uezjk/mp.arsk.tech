@@ -1,14 +1,12 @@
-export function Button(props: {
-  children: Element | string;
-  className?: string;
-  onClick?: (e: Event) => void;
-}) {
+import { JSX } from "preact";
+import { IS_BROWSER } from "$fresh/runtime.ts";
+
+export function Button(props: JSX.HTMLAttributes<HTMLButtonElement>) {
   return (
     <button
-      onClick={props.onClick}
-      class={`rounded-sm shadow-sm p-2 ${props.className}`}
-    >
-      {props.children}
-    </button>
+      {...props}
+      disabled={!IS_BROWSER || props.disabled}
+      class={`cursor-pointer rounded-sm shadow-sm p-2 ${props.class}`}
+    />
   );
 }

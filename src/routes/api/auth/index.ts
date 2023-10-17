@@ -1,16 +1,8 @@
 import { Handlers } from "$fresh/server.ts";
 import { JsonResponse } from "~utils/helpers.ts";
 import { supabase } from "~utils/supabase.ts";
-import { OAUTH_REDIRECT } from "~utils/costants.ts";
 
 export const handler: Handlers = {
-  async GET(req, _ctx) {
-    const requestURL = new URL(req.url);
-    const provider: any = requestURL.searchParams.get("provider");
-    const { data } = await supabase.auth.signInWithOAuth({ provider, options: { redirectTo: OAUTH_REDIRECT } });
-    return JsonResponse({ data });
-  },
-
   async POST(req, _ctx) {
     const { access_token } = await req.json();
     const { error, data } = await supabase.auth.getUser(access_token);

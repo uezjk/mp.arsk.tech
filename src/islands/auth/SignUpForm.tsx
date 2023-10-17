@@ -1,5 +1,5 @@
 import { useState } from "preact/hooks";
-import { Button, InputItem } from "~components/ui/index.ts";
+import { Button, InputItem } from "../../components/ui/mod.ts";
 import ajax from "~utils/ajax.ts";
 
 export default function SignUpForm(props: { title: string }) {
@@ -40,7 +40,7 @@ export default function SignUpForm(props: { title: string }) {
         <InputItem title="邀请码" name="invite_code" value={input.invite_code} onInput={inputUpdate} />
       </div>
       <div class="grid gap-2 pt-8">
-        <Button className="block bg-[#130f40] text-center text-white" onClick={submitFn}>
+        <Button class="block bg-[#130f40] text-center text-white" onClick={submitFn}>
           {loading ? "请稍后" : "注册"}
         </Button>
         <div class="min-h-8 flex items-start justify-between text-white">

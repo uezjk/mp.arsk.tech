@@ -1,7 +1,6 @@
 import { useEffect, useState } from "preact/hooks";
-import { Button } from "~components/ui/index.ts";
+import { InputItem, Button } from "../components/ui/mod.ts";
 import { auth } from "~utils/state/auth.ts";
-import { InputItem } from "~components/ui/index.ts";
 import ajax from "~utils/ajax.ts";
 
 export default function ProfileBody() {
@@ -44,8 +43,8 @@ export default function ProfileBody() {
         <InputItem title="昵称" name="nick" value={input.nick} onInput={inputUpdate} />
         <InputItem title="头像" name="avatar" value={input.avatar} onInput={inputUpdate} />
 
-        <Button className="text-center bg-gray-800 text-white" onClick={saveFn}>提交</Button>
-        <Button className="text-center bg-gray-400 text-white" onClick={destroyFn}>退出</Button>
+        <Button class="text-center bg-gray-800 text-white" onClick={saveFn}>提交</Button>
+        <Button class="text-center bg-gray-400 text-white" onClick={destroyFn}>退出</Button>
       </div>
     </>
   );
