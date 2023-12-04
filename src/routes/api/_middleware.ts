@@ -1,6 +1,6 @@
-import { MiddlewareHandlerContext } from "$fresh/server.ts";
+import { FreshContext } from "$fresh/server.ts";
 
-export async function handler(_req: Request, ctx: MiddlewareHandlerContext) {
+export async function handler(_req: Request, ctx: FreshContext) {
   if (_req.method == "OPTIONS") {
     const resp = new Response(null, { status: 204 });
     const origin = _req.headers.get("Origin") || "*";

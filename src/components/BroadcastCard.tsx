@@ -8,7 +8,7 @@ export default function BroadcastCard(props: Props) {
     <div class="md:flex">
       <div class="md:flex-shrink-0">
         <a href={"/x/broadcast/" + item.id}>
-          <img class="w-full h-56 object-cover md:(w-72 h-44)" src={item.thumb} />
+          <img class="w-full h-56 object-cover md:w-72 md:h-44" src={item.thumb} />
         </a>
       </div>
       <div class="p-4 bg-gray-100 w-full">

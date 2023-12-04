@@ -7,3 +7,6 @@
 
 # Fresh build directory
 _fresh/
+
+# Dependency directories
+node_modules/

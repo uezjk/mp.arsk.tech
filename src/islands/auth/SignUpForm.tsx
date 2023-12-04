@@ -29,7 +29,7 @@ export default function SignUpForm(props: { title: string }) {
   };
 
   return (
-    <div class="w-full px-10 md:(px-20 max-w-screen-sm pb-10)">
+    <div class="w-full px-10 md:px-20 md:max-w-screen-sm md:pb-10">
       <div class="grid gap-4 pb-4 text-white">
         <h3 class="text-4xl">{props.title}</h3>
         <div class="text-sm">获取邀请码请联系 support@energytrust-cn.com</div>

@@ -26,7 +26,7 @@ export default function Privacy({ data }: PageProps<Page>) {
         <link rel="stylesheet" href={asset("/gfm.css")} />
       </Head>
       <div class="p-10 min-h-screen w-screen flex items-start justify-center bg-gradient-to-t from-black to-[#130f40]">
-        <div class="markdown-body w-full md:(max-w-screen-lg)">
+        <div class="markdown-body w-full md:max-w-screen-lg">
           <div class="px-4">
             <h1>{title}</h1>
           </div>

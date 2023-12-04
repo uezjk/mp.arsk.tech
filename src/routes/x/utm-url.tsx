@@ -11,7 +11,7 @@ export default function UtmUrl() {
       </Head>
 
       <main class="w-full flex flex-col gap-4 pt-2 pb-4 place-items-center min-h-screen">
-        <div class="px-2 w-full md:(max-w-screen-md)">
+        <div class="px-2 w-full md:max-w-screen-md">
           <div class="p-8">
             <TitleUtmUrl class="h-8 block mx-auto text-indigo-700" />
           </div>

@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.v-profile {
+  background: url('./images/roewe-rx5-20230710.jpg') no-repeat 50% 50%;
+  background-size: cover;
+}
