@@ -1,5 +1,5 @@
 import { useEffect, useState } from "preact/hooks";
-import { InputItem, Button } from "../components/ui/mod.ts";
+import { Button, InputItem } from "~components/ui/mod.ts";
 import { auth } from "~utils/state/auth.ts";
 import ajax from "~utils/ajax.ts";
 

@@ -125,8 +125,6 @@ export function renderMarkdown(
   opts: MarkdownOptions = {},
 ): string {
   const markedOpts: Marked.MarkedOptions = { gfm: true, renderer: new DefaultRenderer() };
-  const html = opts.inline
-    ? Marked.parseInline(input, markedOpts) as string
-    : Marked.parse(input, markedOpts) as string;
+  const html = opts.inline ? Marked.parseInline(input, markedOpts) as string : Marked.parse(input, markedOpts) as string;
   return html;
 }

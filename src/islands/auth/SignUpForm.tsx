@@ -1,5 +1,5 @@
 import { useState } from "preact/hooks";
-import { Button, InputItem } from "../../components/ui/mod.ts";
+import { Button, InputItem } from "~components/ui/mod.ts";
 import ajax from "~utils/ajax.ts";
 
 export default function SignUpForm(props: { title: string }) {
