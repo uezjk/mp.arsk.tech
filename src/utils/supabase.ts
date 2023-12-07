@@ -1,9 +1,9 @@
 import { createClient } from "@supabase/supabase-js";
 import { Database } from "~shared/database.types.ts";
 
-const supabaseUrl = Deno.env.get("SUPABASE_URL");
-const supabaseKey = Deno.env.get("SUPABASE_KEY");
-const supabaseServiceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+const supabaseUrl = Deno.env.get("SUPABASE_URL") || "http://localhost:8000";
+const supabaseKey = Deno.env.get("SUPABASE_KEY") || "SUPABASE_KEY";
+const supabaseServiceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "SUPABASE_SERVICE_ROLE_KEY";
 
 // if (!supabaseUrl || !supabaseKey || !supabaseServiceRoleKey) {
 //   throw new Error("Missing SUPABASE_URL, SUPABASE_KEY, or SUPABASE_SERVICE_ROLE_KEY");
