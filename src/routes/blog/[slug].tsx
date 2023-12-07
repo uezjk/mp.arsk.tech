@@ -4,9 +4,12 @@ import { CSS, render } from "$gfm";
 import { Head } from "$fresh/runtime.ts";
 import { join } from "$std/path/mod.ts";
 
-type BlogProps = { markdown: string; attrs: Record<string, unknown> };
+type Data = {
+  markdown: string;
+  attrs: Record<string, unknown>;
+};
 
-export const handler: Handlers<BlogProps> = {
+export const handler: Handlers<Data> = {
   async GET(_req, ctx) {
     const slug = ctx.params.slug as string;
     try {
@@ -19,7 +22,7 @@ export const handler: Handlers<BlogProps> = {
   },
 };
 
-export default function Article({ data }: PageProps<BlogProps | null>) {
+export default function Article({ data }: PageProps<Data>) {
   if (!data) return null;
   const { attrs, markdown } = data;
   return (
