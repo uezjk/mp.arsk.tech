@@ -1,4 +1,9 @@
-export type BaseModel = { id: number; createdAt: string; updatedAt: string; publishedAt: string };
+export type BaseModel = {
+  id: number;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+};
 
 export type BoradcastView = BaseModel & {
   title: string;
@@ -11,4 +16,10 @@ export type BoradcastView = BaseModel & {
   thumb: string;
 };
 
-export type BoardcastListItem = { title: string; views: string; publish: string; thumb: string; id: number };
+export type BoardcastListItem = {
+  title: string;
+  views: string;
+  publish: string;
+  thumb: string;
+  id: number;
+};
