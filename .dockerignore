@@ -2,3 +2,5 @@
 .vscode
 Dockerfile
 Makefile
+node_modules/
+_fresh/
