@@ -21,7 +21,7 @@
     "~islands/": "./src/islands/",
     "~components/": "./src/components/",
     "denomailer": "https://deno.land/x/denomailer@1.6.0/mod.ts",
-    "$fresh/": "https://deno.land/x/fresh@1.6.0/",
+    "$fresh/": "https://deno.land/x/fresh@1.6.1/",
     "react": "https://esm.sh/preact@10.18.1/compat",
     "react-dom": "https://esm.sh/preact@10.18.1/compat",
     "react/jsx-runtime": "https://esm.sh/preact@10.18.1/jsx-runtime",
@@ -46,5 +46,11 @@
     "jsxImportSource": "preact",
     "lib": ["dom", "dom.iterable", "esnext"]
   },
-  "exclude": ["**/_fresh/*"]
+  "exclude": ["**/_fresh/*"],
+  "deploy": {
+    "project": "c3c12a64-6c14-470a-9b62-5302df8fbea1",
+    "exclude": [],
+    "include": [],
+    "entrypoint": "src/main.ts"
+  }
 }
